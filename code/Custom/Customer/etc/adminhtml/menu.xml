@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="Custom_Customer::root" 
+        title="Custom" 
+        translate="title" 
+        module="Custom_Customer" 
+        sortOrder="50" 
+        dependsOnModule="Custom_Customer" 
+        resource="Custom_Customer::root"/>
+      <add id="Custom_Customer::newcustomer" 
+        title="Customer" 
+        translate="title" 
+        module="Custom_Customer" 
+        parent="Custom_Customer::root" 
+        sortOrder="10" 
+        dependsOnModule="Custom_Customer"
+        action="custom/customer"
+        resource="Custom_Customer::newcustomer"/>
+    </menu>
+</config>
+

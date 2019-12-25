@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <frontend>
+        <events>
+            <sales_order_save_after>
+                <observers>
+                    <deactivateonoutofstock>
+                        <type>singleton</type>
+                        <class>Custom_AutoEnableProduct_Model_Observer</class>
+                        <method>salesOrderSaveAfter</method>
+                    </deactivateonoutofstock>
+                </observers>
+            </sales_order_save_after>
+        </events>
+        <routers>
+            <Custom_AutoEnableProduct>
+                <use>standard</use>
+                <args>
+                    <module>Custom_AutoEnableProduct</module>
+                    <frontName>DeactivateOnOutOfStock</frontName>
+                </args>
+            </Custom_AutoEnableProduct>
+        </routers>
+    </frontend>
+</config>
