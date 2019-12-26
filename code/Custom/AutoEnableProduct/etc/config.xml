@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <config>
+    <!-- <event></event>
     <frontend>
         <events>
             <sales_order_save_after>
@@ -21,5 +22,5 @@
                 </args>
             </Custom_AutoEnableProduct>
         </routers>
-    </frontend>
+    </frontend> -->
 </config>

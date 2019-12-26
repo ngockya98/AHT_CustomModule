@@ -1,7 +1,18 @@
 <?php
+namespace Custom\AutoEnableProduct;
+
+use Magento\Framework\Event\ManagerInterface as EventManager;
+
 class Custom_AutoEnableProduct_Model_Observer
 {
-    public function salesOrderSaveAfter($observer)
+    private $eventManager;
+
+    public function __construct(EventManager $eventManager)
+    {
+        $this->eventManager = $eventManager;
+    }
+
+    public function salesOrderSaveAfter()
     {
         $storeId = 0; //the admin store view, change this if you want to disable only for the store view from which the order came
         $order= $observer->getEvent()->getOrder();
